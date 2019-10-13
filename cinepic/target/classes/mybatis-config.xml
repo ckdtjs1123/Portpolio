@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="popteam.cinepic.vo.User" alias="User"/>
+		<typeAlias type="popteam.cinepic.vo.Movie" alias="Movie"/>
+		<typeAlias type="popteam.cinepic.vo.Review" alias="Review"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/Mapper.xml"/>
+	</mappers>
+</configuration>
