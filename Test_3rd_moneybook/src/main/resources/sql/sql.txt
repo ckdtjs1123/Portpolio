@@ -1,0 +1,20 @@
+-- DML / DDL 명령문을 작성
+
+//moneybook_member table
+create table moneybook_member(
+userid varchar2(20) primary key,
+userpwd varchar2(20) not null);
+
+//moneybook_info table
+create table moneybook_info(
+infonum number primary key,
+userid varchar2(20) not null CONSTRAINT mi_fk REFERENCES moneybook_member(userid),
+memo varchar2(1000) not null,
+type varchar2(20) not null,
+amount number default 0,
+inputdate date default sysdate);
+
+
+
+//moneybook_info(infonum)'s sequence
+create sequence moneybook_seq;
